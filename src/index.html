@@ -19,14 +19,13 @@ eleventyNavigation:
 <section id="hero">
   <div class="cs-container">
     <div class="cs-flex-group">
-      <span class="cs-topper">mountain hiking society</span>
-      <h1 class="cs-title">Explore the World with Exciting People</h1>
+      <span class="cs-topper"></span>
+      <h1 class="cs-title">Design that makes an impression</h1>
       <p class="cs-text">
-        Tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius. Nibh tortor id aliquet lectus proin nibh
-        condimentum.
-      </p>
+We specialize in designing and developing beautiful, high-quality websites for businesses of all sizes
+</p>
       <a href="" class="cs-button-solid">Explore More</a>
-      <a href="" class="cs-button-transparent">
+      {# <a href="" class="cs-button-transparent">
         <img
           class="cs-img"
           loading="lazy"
@@ -37,12 +36,12 @@ eleventyNavigation:
           height="17"
 />
         Learn More
-      </a>
+      </a> #}
     </div>
   </div>
 
   <!-- Background Image -->
-  {% image './src/images/landing.jpg', 'mountains', 'cs-picture', 'eager', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
+  {# {% image './src/images/landing.jpg', 'mountains', 'cs-picture', 'eager', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%} #}
 </section>
 
 <!-- ============================================ -->
@@ -51,6 +50,13 @@ eleventyNavigation:
 
 <section id="services" class="services">
   <!-- Get Icons From flaticon.com -->
+  <div class="card">
+    <h2 id="review-intro-title">Our Mission</h2>
+    <p>
+    At Insiteful, we create custom hand-coded websites that attract more customers and help your small business grow. Let us help you take your online presence to the next level.
+    </p>
+  </div>
+
   <div class="card">
     <picture>
       <img
@@ -63,7 +69,9 @@ eleventyNavigation:
 />
     </picture>
     <h2>Service 1</h2>
-    <p>Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences.</p>
+    <p>
+    We prioritize creating mobile-first websites that look great and function seamlessly on any screen size, giving your customers the best possible experience.
+    </p>
   </div>
   <div class="card">
     <picture>

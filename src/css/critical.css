@@ -14,6 +14,8 @@
     z-index: 1;
     /* prevents overflow from the lines extending past the screen width */
     overflow: hidden;
+    background: -webkit-gradient(linear, left top, left bottom, from(#1b1b1b), color-stop(#19191a), color-stop(#18171a), color-stop(#161519), color-stop(#141319), color-stop(#121118), color-stop(#111018), color-stop(#0f0e17), color-stop(#0d0c15), color-stop(#0c0a14), color-stop(#0a0812), to(#080610));
+    background: linear-gradient(to bottom, #1b1b1b, #19191a, #18171a, #161519, #141319, #121118, #111018, #0f0e17, #0d0c15, #0c0a14, #0a0812, #080610);
   }
   #hero .cs-picture {
     /* Background Image */
@@ -47,7 +49,8 @@
     height: 100%;
     width: 100%;
     /* Makes image act like a background-image */
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   #hero .cs-container {
     width: 100%;
@@ -55,7 +58,7 @@
     /* we put the padding top and bottom on the container instead of #Hero so the pseudo element lines go to the top and bottom of the section */
     /* 144px - 280px - leaving extra space for the navigation */
     /* changes on tablet */
-    padding: clamp(9em, 25.95vw, 17.5em) 0;
+    padding: clamp(10.5em, 25.95vw, 17.5em) 0;
     margin: auto;
     position: relative;
   }
@@ -64,7 +67,6 @@
     content: '';
     width: 1px;
     height: 100%;
-    background: -moz-linear-gradient(top, rgba(250, 251, 252, 0.5) 0%, rgba(250, 251, 252, 0) 100%);
     /* FF3.6-15 */
     background: -webkit-linear-gradient(top, rgba(250, 251, 252, 0.5) 0%, rgba(250, 251, 252, 0) 100%);
     /* Chrome10-25,Safari5.1-6 */
@@ -80,12 +82,20 @@
     margin: auto;
     width: 80vw;
     /* 464px - 562px */
-    max-width: clamp(29em, 60vw, 35.125em);
+    max-width: clamp(29em, 60vw, 45.125em);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-wrap: wrap;
-    box-sizing: border-box;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
   #hero .cs-topper {
     /* 13px - 16px */
@@ -101,8 +111,9 @@
   }
   #hero .cs-title {
     /* 39px - 61px */
-    font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
-    font-weight: 900;
+    font-size: clamp(2.3375rem, 6.4vw, 4.7rem);
+    font-weight: 500;
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     line-height: 1.2em;
     text-align: center;
     width: 100%;
@@ -110,10 +121,20 @@
     margin: 0 auto clamp(2rem, 4vw, 2.5rem) 0;
     color: var(--bodyTextColorWhite);
     position: relative;
+    background: #FFFFFF;
+    background: -webkit-gradient(linear, left top, right bottom, from(#ffffff), color-stop(80%, #969cad));
+    background: linear-gradient(to bottom right, #ffffff 0%, #969cad 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: 0.7s ease-out 0s 1 slideInLeft;
+            animation: 0.7s ease-out 0s 1 slideInLeft;
+    text-shadow: 0.1px #fff;
   }
   #hero .cs-text {
     /* 16px - 20px */
-    font-size: clamp(1rem, 1.95vw, 1.25rem);
+    font-size: clamp(1.03rem, 1.4vw, 2.1rem);
+    font-weight: 400;
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     line-height: 1.5em;
     text-align: center;
     width: 100%;
@@ -121,23 +142,33 @@
     margin: 0 auto clamp(2rem, 4vw, 2.5rem) 0;
     /* 40px - 48px */
     margin-bottom: clamp(2.5rem, 4vw, 3rem);
-    color: var(--bodyTextColorWhite);
+    color: #b4bcd0;
+    -webkit-animation: 0.7s ease-out 0s 1 slideInLeft-delay;
+            animation: 0.7s ease-out 0s 1 slideInLeft-delay;
   }
   #hero .cs-button-solid {
     font-size: 1rem;
     /* 46px - 56px */
     line-height: clamp(2.875em, 5.5vw, 3.5em);
-    width: 11.25rem;
+    width: 10rem;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 400;
     margin: 0 0.5rem 1rem 0.5rem;
     color: var(--headerColor);
     padding: 0;
-    background-color: var(--primary);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #7064bf), to(#3e54d4));
+    background: linear-gradient(to bottom, #7064bf 5%, #3e54d4 100%);
+    background-color: #7064bf;
     display: inline-block;
     position: relative;
     z-index: 1;
+    -webkit-transition: color .3s;
     transition: color .3s;
+    border-radius: 42px;
+    cursor: pointer;
+    color: #ffffff;
+    -webkit-animation: 0.7s ease-out 0s 1 slideInLeft-delay-long;
+            animation: 0.7s ease-out 0s 1 slideInLeft-delay-long;
   }
   #hero .cs-button-solid:before {
     content: '';
@@ -145,18 +176,14 @@
     display: block;
     height: 100%;
     width: 0%;
-    background: #000;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #0300b5), to(#4020a1));
+    background: linear-gradient(to bottom, #0300b5 5%, #4020a1 100%);
     opacity: 1;
     top: 0;
     left: 0;
     z-index: -1;
+    -webkit-transition: width .3s;
     transition: width .3s;
-  }
-  #hero .cs-button-solid:hover {
-    color: var(--bodyTextColorWhite);
-  }
-  #hero .cs-button-solid:hover:before {
-    width: 100%;
   }
   #hero .cs-button-transparent {
     font-size: 1rem;
@@ -172,10 +199,17 @@
     padding: 0;
     background-color: transparent;
     border: 1px solid var(--bodyTextColorWhite);
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: relative;
     z-index: 1;
   }
@@ -191,17 +225,161 @@
     right: -1px;
     bottom: -1px;
     z-index: -1;
-    transform-origin: left;
+    -webkit-transform-origin: left;
+            transform-origin: left;
     /* this is what creates the grow affect on hover */
-    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
     transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
   }
   #hero .cs-button-transparent:hover:before {
-    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
   }
   #hero .cs-button-transparent .cs-img {
     display: block;
     margin-right: 0.75rem;
+  }
+}
+@-webkit-keyframes slideInLeft {
+  0% {
+    -webkit-transform: translateY(-5%);
+            transform: translateY(-5%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 100;
+  }
+}
+@keyframes slideInLeft {
+  0% {
+    -webkit-transform: translateY(-5%);
+            transform: translateY(-5%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 100;
+  }
+}
+@-webkit-keyframes slideInLeft-delay {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translateY(-5%);
+            transform: translateY(-5%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 100;
+  }
+}
+@keyframes slideInLeft-delay {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translateY(-5%);
+            transform: translateY(-5%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 100;
+  }
+}
+@-webkit-keyframes slideInLeft-delay-long {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    -webkit-transform: translateY(-5%);
+            transform: translateY(-5%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 100;
+  }
+}
+@keyframes slideInLeft-delay-long {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    -webkit-transform: translateY(-5%);
+            transform: translateY(-5%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 100;
+  }
+}
+@-webkit-keyframes fadeInAnimation-delay {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeInAnimation-delay {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes wait {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes wait {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeInAnimation {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+@keyframes fadeInAnimation {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
   }
 }
 /* Tablet - 768px */
@@ -211,14 +389,13 @@
     padding: 0 clamp(2em, 5vw, 2.5em);
   }
   #hero .cs-container {
-    padding: clamp(7em, 27.95vw, 17.5em) 0 clamp(9em, 30.95vw, 23.5em) 0;
+    padding: clamp(7em, 27.95vw, 10.5em) 0 clamp(9em, 30.95vw, 23.5em) 0;
   }
   #hero .cs-container:after {
     /* Right Line */
     content: '';
     width: 1px;
     height: 100%;
-    background: -moz-linear-gradient(top, rgba(250, 251, 252, 0) 0%, rgba(250, 251, 252, 0.5) 100%);
     /* FF3.6-15 */
     background: -webkit-linear-gradient(top, rgba(250, 251, 252, 0) 0%, rgba(250, 251, 252, 0.5) 100%);
     /* Chrome10-25,Safari5.1-6 */
@@ -236,7 +413,6 @@
 /* Desktop Parallax Effect - 1300px */
 @media only screen and (min-width: 81.25em) {
   #hero {
-    background: url("/images/landing-2000w.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -258,16 +434,21 @@
   .services {
     border-radius: 0.3125em;
     margin: auto;
-    margin-top: -10.4375em;
+    margin-top: -2em;
     position: relative;
     z-index: 100;
-    background: #fff;
     width: 90%;
     max-width: 82.5em;
     padding: 3.125em 1.25em;
-    border-top: 0.375em solid var(--primary);
-    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
+            box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
     margin-bottom: 3.125em;
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+  .services #review-intro-title {
+    color: var(--bodyTextColorWhite);
+    font-size: clamp(2.3375rem, 6.4vw, 4.7rem);
+    font-weight: 500;
   }
   .services .card {
     display: block;
@@ -283,9 +464,15 @@
     background: var(--primary);
     width: 5.5em;
     height: 5.5em;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin: auto;
     margin-bottom: 1.4375em;
     border-radius: 50%;
@@ -307,15 +494,22 @@
     line-height: 1.33333333em;
     width: 100%;
     opacity: .7;
+    color: #b4bcd0;
   }
 }
 /* Inbetween */
 @media only screen and (min-width: 768px) {
   .services {
     font-size: min(1.8vw, 1em);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     width: 98%;
   }
   .services .card {

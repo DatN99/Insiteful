@@ -24,7 +24,7 @@
     }
 
     // Grab your fonts to locally host from https://google-webfonts-helper.herokuapp.com/fonts
-    
+
     /* roboto-regular - latin */
     @font-face {
         font-family: 'Roboto';
@@ -52,13 +52,14 @@
             url('/assets/fonts/roboto-v29-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
             url('/assets/fonts/roboto-v29-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
     }
-    
+
     body, html {
         margin: 0;
         padding: 0;
         font-size: 100%;
         font-family: 'Roboto', Arial, sans-serif;
         color: var(--bodyTextColor);
+        background: #080610;
         overflow-x: hidden;
     }
 
@@ -71,7 +72,7 @@
     body {
         transition: background-color .3s;
     }
-    
+
     .container {
         position: relative;
         width: 92%;
@@ -82,7 +83,7 @@
         margin: 0;
         color: var(--headerColor);
     }
-    
+
     p, li, a {
         font-size: 18/16rem;
         line-height: 27/18em;
@@ -98,7 +99,7 @@
             cursor: pointer;
         }
     }
-    
+
     // Buttons
     .button-solid {
         font-size: 16/16rem;
@@ -143,7 +144,7 @@
             transition: width .3s;
         }
     }
-    
+
     // HIdden Screen reader skip nav button
     .skip {
         position: absolute;
@@ -552,12 +553,12 @@
                             bottom: 2/16rem;
                             z-index: -1;
                             left: 0;
-        
+
                             // transition properties
                             width: 0%;
                             transition: width .3s;
                         }
-        
+
                         &:hover {
                             &:before {
                                 width: 100%;
@@ -688,7 +689,7 @@
                 }
             }
         }
-        
+
     }
 }
 
@@ -762,7 +763,7 @@
             width: 96%;
         }
     }
-    
+
 }
 
 /* Tablet */
@@ -798,10 +799,10 @@
 @media only screen and (min-width: 0em) {
 
     #footer {
-        background: #1C1C1C;
+        background: #080610;
         padding: 84/16rem 0 20/16rem;
         font-size:~"min(4vw, 1.2em)";
-
+        border-top: 2px solid rgba(255, 255, 255, 0.1);
         .left-section {
             margin: auto;
             margin-bottom: 50/16rem;
@@ -820,7 +821,7 @@
                     display: block;
                 }
             }
-    
+
             p {
                 font-size: 14/16rem;
                 line-height: 27/14;
@@ -869,7 +870,7 @@
 						color: #fff;
 						font-size: 18/16rem;
 						opacity: .9;
-                        
+
                         a {
                             text-decoration: none;
                             color: #fff;
@@ -908,7 +909,7 @@
                 display: flex;
                 justify-content: center;
             }
-    
+
             .button-solid {
                 margin: 0;
                 height: 53/16rem;
